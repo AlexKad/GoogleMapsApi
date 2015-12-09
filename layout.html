@@ -2,25 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Google maps</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div class="main">
-	<div class="holder" id="map_holder1"></div>
-	<div class="holder" id="map_holder2"></div>
-	<div class="holder" id="map_holder3"></div>
-	<div class="holder" id="map_holder4"></div>
-</div>
- <script>
-	var map;
-	function initMap() {
-	  map = new google.maps.Map(document.getElementById('map_holder1'), {
-	    center: {lat: -34.397, lng: 150.644},
-	    zoom: 8
-	  });
-	}
- </script>
- <script src="https://maps.googleapis.com/maps/api/js?key=test_google_api&callback=initMap"
-        async defer></script>
+		<div class="holder" id="map_holder1"></div>
+		<div class="holder" id="map_holder2"></div>
+	</div>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+	></script>
+	<script src="main.js">	
+	</script>
 </body>
 </html>
