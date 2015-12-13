@@ -18,10 +18,20 @@ function initMap () {
 };
 function createMap(el, zoom){
     holder = document.getElementById(el);
-	return new google.maps.Map(holder,{
-		center: {lat: -34.397, lng: 150.644},
-		zoom: zoom || 8
-	});
+    var startConifg = {
+    	center: {lat: -34.397, lng: 150.644},
+		zoom: zoom || 8};
+
+    var config = jQuery.extend(startConifg, getMapConfig());
+	return new google.maps.Map(holder, config);
+};
+function getMapConfig(){
+	return {
+		zoomControl: document.getElementById('showZoomChk').checked,
+		scaleControl: document.getElementById('showScaleChk').checked,
+		streetViewControl: document.getElementById('showStreetViewChk').checked,
+		rotateControl: document.getElementById('showRotateChk').checked
+	}
 };
 function codeAddress(address, map) {  
   geocoder.geocode( { 'address': address}, function(results, status) {

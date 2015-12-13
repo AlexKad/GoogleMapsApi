@@ -1,3 +1,6 @@
 html, body { height: 100%; margin: 0; padding: 0; }
 .main { padding: 20px;}
+.configZone{}
+.configLine {width:300px; margin:5px 0;}
+.configZone label{color:'#7e7e7e';}
 .holder { height: 200px; width:400px; margin:10px; }

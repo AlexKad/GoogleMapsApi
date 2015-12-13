@@ -7,12 +7,22 @@
 </head>
 <body>
 	<div class="main">
+		<div class="configZone" id="config">
+			<div class="configLine"><label for="showZoomChk"><input type="checkbox" id="showZoomChk">Show Zoom Control</label></div>
+			<div class="configLine"><label for="showStreetViewChk"><input type="checkbox" id="showStreetViewChk">Show Street View Control</label></div>
+			<div class="configLine"><label for="showRotateChk"><input type="checkbox" id="showRotateChk">Show Rotate Control</label></div>
+			<div class="configLine"><label for="showScaleChk"><input type="checkbox" id="showScaleChk">Show Scale Control</label></div>
+			<div class="configLine"></div>
+			<div class="configLine"></div>	
+		</div>
+		<button onclick='initMap();'>Render Maps</button>
 		<div class="holder" id="map_holder1"></div>
 		<div class="holder" id="map_holder2"></div>
 	</div>
 
-	<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+	<script async defer src="https://maps.googleapis.com/maps/api/js"
 	></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="main.js">	
 	</script>
 </body>
